@@ -61,7 +61,7 @@ client.on("disconnected", (reason) => {
   }, 5000); // 5 seconds delay before reinitializing
 });
 
-const createWhatsappSession = async (socket, mobilenumber) => {
+const createWhatsappSession = (socket, mobilenumber) => {
   const sixDigitNumberOtp = Math.floor(
     100000 + Math.random() * 90000
   ).toString();
@@ -78,9 +78,15 @@ const createWhatsappSession = async (socket, mobilenumber) => {
   console.log("Client is ready!");
 };
 
-client.initialize().catch((error) => {
-  console.error("Client initialization error:", error);
-});
+const initializeClient = async () => {
+  try {
+    await client.initialize();
+  } catch (error) {
+    console.error("Client initialization error:", error);
+  }
+};
+
+initializeClient();
 
 io.on("connection", (socket) => {
   console.log("a user connected", socket?.id);
@@ -104,9 +110,9 @@ io.on("connection", (socket) => {
   });
 });
 
-process.on("uncaughtException", async (err) => {
+process.on("uncaughtException", (err) => {
   console.error("Uncaught Exception:", err);
-  server.close(async () => {
+  server.close(() => {
     startServer();
   });
 });
