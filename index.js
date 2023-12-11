@@ -36,7 +36,7 @@ const client = new Client({
     clientId: "YOUR_CLIENT_ID",
   }),
   puppeteer: {
-    headless: true,
+    headless: false,
     ignoreDefaultArgs: ["--disable-extensions"],
     args: ["--no-sandbox", "--disable-setuid-sandbox"],
   },
