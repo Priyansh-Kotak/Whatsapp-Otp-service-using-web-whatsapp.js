@@ -1,0 +1,8 @@
+2023/12/11-09:59:24.023 5bb0 Reusing MANIFEST D:\Web developmnt\Projects\Next.js_Projects\OTP_whatsapp_service\.wwebjs_auth\session-YOUR_CLIENT_ID\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/MANIFEST-000001
+2023/12/11-09:59:24.024 5bb0 Recovering log #23932
+2023/12/11-09:59:24.057 5bb0 Reusing old log D:\Web developmnt\Projects\Next.js_Projects\OTP_whatsapp_service\.wwebjs_auth\session-YOUR_CLIENT_ID\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/023932.log 
+2023/12/11-09:59:24.987 9904 Compacting 1@0 + 0@1 files
+2023/12/11-09:59:25.038 9904 Generated table #23935@0: 25800 keys, 553704 bytes
+2023/12/11-09:59:25.051 9904 Generated table #23936@0: 3816 keys, 220543 bytes
+2023/12/11-09:59:25.051 9904 Compacted 1@0 + 0@1 files => 774247 bytes
+2023/12/11-09:59:25.053 9904 compacted to: files[ 0 2 20 0 0 0 0 ]
