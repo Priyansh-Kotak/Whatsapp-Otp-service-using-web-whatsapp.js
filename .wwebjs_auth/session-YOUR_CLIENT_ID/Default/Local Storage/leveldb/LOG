@@ -1,3 +1,2 @@
-2023/12/11-22:23:19.922 6770 Reusing MANIFEST D:\Web developmnt\Projects\Next.js_Projects\OTP_whatsapp_service\.wwebjs_auth\session-YOUR_CLIENT_ID\Default\Local Storage\leveldb/MANIFEST-000001
-2023/12/11-22:23:19.923 6770 Recovering log #54
-2023/12/11-22:23:19.923 6770 Reusing old log D:\Web developmnt\Projects\Next.js_Projects\OTP_whatsapp_service\.wwebjs_auth\session-YOUR_CLIENT_ID\Default\Local Storage\leveldb/000054.log 
+2023/12/12-09:00:21.791 9144 Creating DB D:\Web developmnt\Projects\Next.js_Projects\OTP_whatsapp_service\.wwebjs_auth\session-YOUR_CLIENT_ID\Default\Local Storage\leveldb since it was missing.
+2023/12/12-09:00:21.883 9144 Reusing MANIFEST D:\Web developmnt\Projects\Next.js_Projects\OTP_whatsapp_service\.wwebjs_auth\session-YOUR_CLIENT_ID\Default\Local Storage\leveldb/MANIFEST-000001
