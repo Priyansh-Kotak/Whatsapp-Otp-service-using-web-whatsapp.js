@@ -1,2 +1,3 @@
-2023/12/12-09:00:26.774 3cb4 Creating DB D:\Web developmnt\Projects\Next.js_Projects\OTP_whatsapp_service\.wwebjs_auth\session-YOUR_CLIENT_ID\Default\File System\Origins since it was missing.
-2023/12/12-09:00:26.781 3cb4 Reusing MANIFEST D:\Web developmnt\Projects\Next.js_Projects\OTP_whatsapp_service\.wwebjs_auth\session-YOUR_CLIENT_ID\Default\File System\Origins/MANIFEST-000001
+2023/12/12-10:23:32.373 600 Reusing MANIFEST D:\Web developmnt\Projects\Next.js_Projects\OTP_whatsapp_service\.wwebjs_auth\session-YOUR_CLIENT_ID\Default\File System\Origins/MANIFEST-000001
+2023/12/12-10:23:32.374 600 Recovering log #3
+2023/12/12-10:23:32.374 600 Reusing old log D:\Web developmnt\Projects\Next.js_Projects\OTP_whatsapp_service\.wwebjs_auth\session-YOUR_CLIENT_ID\Default\File System\Origins/000003.log 
