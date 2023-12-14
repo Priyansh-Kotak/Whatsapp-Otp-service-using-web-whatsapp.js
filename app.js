@@ -1,18 +1,20 @@
 // Method 2
-
+require("dotenv").config();
 const express = require("express");
 const app = express();
 const { Client, LocalAuth } = require("whatsapp-web.js");
 const puppeteer = require("puppeteer");
-const port = 8080;
+const port = process.env.PORT;
 const qrcode = require("qrcode-terminal");
 const http = require("http");
 const server = http.createServer(app);
 const { Server } = require("socket.io");
+const chromium = require("@sparticuz/chromium");
 
 const io = new Server(server, {
   cors: {
-    origin: "http://localhost:3000/",
+    origin:
+      "https://greenfield-school-webapp-mx2ah45nt-garg-ujjwal.vercel.app/",
     methods: ["GET", "POST"],
     allowedHeaders: ["*"],
     credentials: true,
@@ -36,9 +38,12 @@ const client = new Client({
     clientId: "YOUR_CLIENT_ID",
   }),
   puppeteer: {
-    headless: true,
     ignoreDefaultArgs: ["--disable-extensions"],
-    args: ["--no-sandbox", "--disable-setuid-sandbox"],
+    args: ["--no-sandbox", "--disable-setuid-sandbox", ...chromium.args],
+    defaultViewport: chromium.defaultViewport,
+    // executablePath: await chromium.executablePath(),
+    headless: chromium.headless,
+    ignoreHTTPSErrors: true,
   },
 });
 
