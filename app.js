@@ -13,8 +13,7 @@ const chromium = require("@sparticuz/chromium");
 
 const io = new Server(server, {
   cors: {
-    origin:
-      "https://greenfield-school-webapp-mx2ah45nt-garg-ujjwal.vercel.app/",
+    origin: "http://localhost:3000/",
     methods: ["GET", "POST"],
     allowedHeaders: ["*"],
     credentials: true,
@@ -34,10 +33,9 @@ const startServer = () => {
 
 // Creating client for WhatsApp connection.
 const client = new Client({
-  authStrategy: new LocalAuth({
-    // clientId: "YOUR_CLIENT_ID",
-    dataPath: "/",
-  }),
+  authStrategy: new LocalAuth(),
+  // clientId: "YOUR_CLIENT_ID",
+  // dataPath: "/",
   puppeteer: {
     // headless: true,
     // ignoreDefaultArgs: ["--disable-extensions"],
