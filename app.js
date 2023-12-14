@@ -35,12 +35,17 @@ const startServer = () => {
 // Creating client for WhatsApp connection.
 const client = new Client({
   authStrategy: new LocalAuth({
-    clientId: "YOUR_CLIENT_ID",
+    // clientId: "YOUR_CLIENT_ID",
+    dataPath: "/",
   }),
   puppeteer: {
-    headless: true,
-    ignoreDefaultArgs: ["--disable-extensions"],
-    args: ["--no-sandbox", "--disable-setuid-sandbox"],
+    // headless: true,
+    // ignoreDefaultArgs: ["--disable-extensions"],
+    // args: [
+    //   "--no-sandbox",
+    //   "--disable-setuid-sandbox",
+    //   "--disable-dev-shm-usage",
+    // ],
   },
 });
 
