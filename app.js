@@ -38,12 +38,9 @@ const client = new Client({
     clientId: "YOUR_CLIENT_ID",
   }),
   puppeteer: {
+    headless: true,
     ignoreDefaultArgs: ["--disable-extensions"],
-    args: ["--no-sandbox", "--disable-setuid-sandbox", ...chromium.args],
-    defaultViewport: chromium.defaultViewport,
-    // executablePath: await chromium.executablePath(),
-    headless: chromium.headless,
-    ignoreHTTPSErrors: true,
+    args: ["--no-sandbox", "--disable-setuid-sandbox"],
   },
 });
 

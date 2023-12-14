@@ -1,3 +1,5 @@
-2023/12/14-22:11:50.043 ce8c Reusing MANIFEST D:\Web developmnt\Projects\Next.js_Projects\OTP_whatsapp_service\.wwebjs_auth\session-YOUR_CLIENT_ID\Default\Local Storage\leveldb/MANIFEST-000001
-2023/12/14-22:11:50.044 ce8c Recovering log #3
-2023/12/14-22:11:50.046 ce8c Reusing old log D:\Web developmnt\Projects\Next.js_Projects\OTP_whatsapp_service\.wwebjs_auth\session-YOUR_CLIENT_ID\Default\Local Storage\leveldb/000003.log 
+2023/12/14-22:13:22.675 c128 Reusing MANIFEST D:\Web developmnt\Projects\Next.js_Projects\OTP_whatsapp_service\.wwebjs_auth\session-YOUR_CLIENT_ID\Default\Local Storage\leveldb/MANIFEST-000001
+2023/12/14-22:13:22.676 c128 Recovering log #3
+2023/12/14-22:13:22.677 c128 Level-0 table #3: started
+2023/12/14-22:13:22.681 c128 Level-0 table #3: 24902 bytes OK
+2023/12/14-22:13:22.685 c128 Delete type=0 #3
