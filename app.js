@@ -9,7 +9,7 @@ const qrcode = require("qrcode-terminal");
 const http = require("http");
 const server = http.createServer(app);
 const { Server } = require("socket.io");
-const chromium = require("@sparticuz/chromium");
+// const chromium = require("@sparticuz/chromium");
 
 const io = new Server(server, {
   cors: {
