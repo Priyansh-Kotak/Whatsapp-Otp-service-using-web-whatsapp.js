@@ -3,7 +3,7 @@ require("dotenv").config();
 const express = require("express");
 const app = express();
 const { Client, LocalAuth } = require("whatsapp-web.js");
-const puppeteer = require("puppeteer");
+// const puppeteer = require("puppeteer");
 const port = process.env.PORT;
 const qrcode = require("qrcode-terminal");
 const http = require("http");
@@ -33,9 +33,8 @@ const startServer = () => {
 
 // Creating client for WhatsApp connection.
 const client = new Client({
-  authStrategy: new LocalAuth({
-    dataPath: "/",
-  }),
+  authStrategy: new LocalAuth(),
+  // dataPath: "/",
   // clientId: "YOUR_CLIENT_ID",
 
   puppeteer: {
