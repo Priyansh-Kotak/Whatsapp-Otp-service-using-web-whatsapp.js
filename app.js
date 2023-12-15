@@ -38,13 +38,13 @@ const client = new Client({
   // clientId: "YOUR_CLIENT_ID",
 
   puppeteer: {
-    // headless: true,
-    // ignoreDefaultArgs: ["--disable-extensions"],
-    // args: [
-    //   "--no-sandbox",
-    //   "--disable-setuid-sandbox",
-    //   "--disable-dev-shm-usage",
-    // ],
+    headless: true,
+    ignoreDefaultArgs: ["--disable-extensions"],
+    args: [
+      "--no-sandbox",
+      "--disable-setuid-sandbox",
+      "--disable-dev-shm-usage",
+    ],
   },
 });
 
