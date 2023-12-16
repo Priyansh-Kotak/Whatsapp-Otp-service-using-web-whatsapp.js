@@ -19,6 +19,8 @@ next-env.d.ts
 
 # production
 /build
+/store
+/.wwebjs_cache
 
 # misc
 .DS_Store
@@ -40,3 +42,4 @@ yarn-error.log*
 
 # typescript
 *.tsbuildinfo
+

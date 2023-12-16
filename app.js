@@ -3,13 +3,12 @@ require("dotenv").config();
 const express = require("express");
 const app = express();
 const { Client, LocalAuth } = require("whatsapp-web.js");
-// const puppeteer = require("puppeteer");
+
 const port = process.env.PORT;
 const qrcode = require("qrcode-terminal");
 const http = require("http");
 const server = http.createServer(app);
 const { Server } = require("socket.io");
-const chromium = require("@sparticuz/chromium");
 
 const io = new Server(server, {
   cors: {
@@ -33,22 +32,18 @@ const startServer = () => {
 
 // Creating client for WhatsApp connection.
 const client = new Client({
-  authStrategy: new LocalAuth(),
+  authStrategy: new LocalAuth({ dataPath: "store" }),
   // dataPath: "/",
   // clientId: "YOUR_CLIENT_ID",
 
   puppeteer: {
-    // headless: true,
+    headless: "new",
     ignoreDefaultArgs: ["--disable-extensions"],
     args: [
       "--no-sandbox",
       "--disable-setuid-sandbox",
       "--disable-dev-shm-usage",
-      ...chromium.args,
     ],
-    defaultViewport: chromium.defaultViewport,
-    // executablePath: await chromium.executablePath(),
-    headless: chromium.headless,
   },
 });
 
