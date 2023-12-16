@@ -12,7 +12,7 @@ const { Server } = require("socket.io");
 
 const io = new Server(server, {
   cors: {
-    origin: "http://localhost:3000/",
+    origin: "https://greenfield-school-webapp-phsf893aj-garg-ujjwal.vercel.app",
     methods: ["GET", "POST"],
     allowedHeaders: ["*"],
     credentials: true,
@@ -48,7 +48,7 @@ const client = new Client({
 });
 
 client.on("authenticated", () => {
-  console.log("Client is authenticated on the server side");
+  console.lsog("Client is authenticated on the server ide");
 });
 
 client.on("qr", (qr) => {
