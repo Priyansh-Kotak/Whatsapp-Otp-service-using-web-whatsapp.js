@@ -34,15 +34,21 @@ const startServer = () => {
 // Creating client for WhatsApp connection.
 const client = new Client({
   authStrategy: new LocalAuth(),
+  // dataPath: "/",
+  // clientId: "YOUR_CLIENT_ID",
+
   puppeteer: {
+    // headless: true,
     ignoreDefaultArgs: ["--disable-extensions"],
     args: [
       "--no-sandbox",
       "--disable-setuid-sandbox",
       "--disable-dev-shm-usage",
+      ...chromium.args,
     ],
-    headless: true, // You can customize this based on your needs
-    executablePath: require("puppeteer").executablePath(), // Set the executable path directly
+    defaultViewport: chromium.defaultViewport,
+    // executablePath: await chromium.executablePath(),
+    headless: chromium.headless,
   },
 });
 
@@ -65,28 +71,21 @@ client.on("disconnected", (reason) => {
   }, 5000); // 5 seconds delay before reinitializing
 });
 
-const createWhatsappSession = async (socket, mobilenumber) => {
-  try {
-    // Ensure that the client is initialized before sending a message
-    await client.initialize();
+const createWhatsappSession = (socket, mobilenumber) => {
+  const sixDigitNumberOtp = Math.floor(
+    100000 + Math.random() * 90000
+  ).toString();
 
-    const sixDigitNumberOtp = Math.floor(
-      100000 + Math.random() * 90000
-    ).toString();
+  client.sendMessage(
+    `91${mobilenumber}@c.us`,
+    `Welcome to GreenField International School, your OTP is ${sixDigitNumberOtp}`
+  );
 
-    client.sendMessage(
-      `91${mobilenumber}@c.us`,
-      `Welcome to GreenField International School, your OTP is ${sixDigitNumberOtp}`
-    );
+  socket.emit("client_otp", sixDigitNumberOtp, mobilenumber);
 
-    socket.emit("client_otp", sixDigitNumberOtp, mobilenumber);
+  socket.emit("client", "Sending a gift from the server to the client");
 
-    socket.emit("client", "Sending a gift from the server to the client");
-
-    console.log("Client is ready!");
-  } catch (error) {
-    console.error("Error creating WhatsApp session:", error);
-  }
+  console.log("Client is ready!");
 };
 
 const initializeClient = async () => {
@@ -96,6 +95,7 @@ const initializeClient = async () => {
     console.error("Client initialization error:", error);
   }
 };
+
 initializeClient();
 
 io.on("connection", (socket) => {
