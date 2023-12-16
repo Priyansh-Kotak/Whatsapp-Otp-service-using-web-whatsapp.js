@@ -1,3 +1,2 @@
-2023/12/16-12:44:03.023 aa90 Reusing MANIFEST D:\Web developmnt\Projects\Next.js_Projects\OTP_whatsapp_service\store\session\Default\Local Storage\leveldb/MANIFEST-000001
-2023/12/16-12:44:03.023 aa90 Recovering log #3
-2023/12/16-12:44:03.024 aa90 Reusing old log D:\Web developmnt\Projects\Next.js_Projects\OTP_whatsapp_service\store\session\Default\Local Storage\leveldb/000003.log 
+2023/12/16-13:12:46.875 a028 Creating DB D:\Web developmnt\Projects\Next.js_Projects\OTP_whatsapp_service\store\session\Default\Local Storage\leveldb since it was missing.
+2023/12/16-13:12:46.885 a028 Reusing MANIFEST D:\Web developmnt\Projects\Next.js_Projects\OTP_whatsapp_service\store\session\Default\Local Storage\leveldb/MANIFEST-000001
