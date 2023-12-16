@@ -48,7 +48,7 @@ const client = new Client({
 });
 
 client.on("authenticated", () => {
-  console.lsog("Client is authenticated on the server ide");
+  console.log("Client is authenticated on the server ide");
 });
 
 client.on("qr", (qr) => {
