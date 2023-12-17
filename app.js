@@ -12,7 +12,7 @@ const { Server } = require("socket.io");
 
 const io = new Server(server, {
   cors: {
-    origin: "https://greenfield-school-webapp-phsf893aj-garg-ujjwal.vercel.app/",
+    origin: "http://localhost:3000/",
     methods: ["GET", "POST"],
     allowedHeaders: ["*"],
     credentials: true,
